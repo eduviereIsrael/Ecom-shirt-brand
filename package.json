@@ -1,0 +1,19 @@
+{
+  "name": "e-com-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduviereIsrael/Ecom-shirt-brand.git"
+  },
+  "author": "Eduviere Israel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eduviereIsrael/Ecom-shirt-brand/issues"
+  },
+  "homepage": "https://github.com/eduviereIsrael/Ecom-shirt-brand#readme"
+}

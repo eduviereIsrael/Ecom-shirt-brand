@@ -1,3 +1,6 @@
+// import products from './products';
+
+// console.log(products)
 const hamburger = document.querySelector('.hambuga');
 const mobileMenuLinks = document.querySelector('.navbar-mobile');
 
@@ -16,3 +19,5 @@ hamburger.addEventListener('click', () => {
     }
     mobileMenuLinks.classList.toggle('navbar-display')
 } )
+
+// const products = require(products)
