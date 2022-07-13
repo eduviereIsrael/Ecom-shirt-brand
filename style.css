@@ -167,12 +167,28 @@ body {
 }
 
 #hero {
-  background-image: url("img/hero4.png");
-  height: 90vh;
   width: 100%;
-  background-size: cover;
-  background-position: top 25% right 0;
-  padding: 0 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #E3E6F3;
+  padding: 0;
+}
+
+#hero .hero-intro {
+  width: 30%;
+  -ms-flex-item-align: center;
+      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -186,6 +202,18 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding-left: 80px;
+}
+
+#hero .heroimg {
+  margin: 0;
+  width: 40%;
+}
+
+#hero .heroimg img {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  width: 100%;
 }
 
 #hero h1 {
@@ -517,6 +545,9 @@ body {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #sm-banner h4 {
@@ -597,7 +628,7 @@ body {
       -ms-flex-align: start;
           align-items: start;
   background-image: url("img/banner/b7.jpg");
-  min-width: 30%;
+  width: 33%;
   height: 50vh;
   background-size: cover;
   background-position: center;
@@ -626,6 +657,65 @@ body {
 }
 
 @media screen and (max-width: 900px) {
+  #header {
+    padding: 20px 35px;
+  }
+  #hero {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #E3E6F3;
+    padding: 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  #hero .hero-intro {
+    width: 100%;
+    padding-left: 0px;
+    padding: 60px 30px 30px 30px;
+    padding-top: 200px;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #hero h1 {
+    color: #088178;
+    font-size: 40px;
+    text-align: center;
+  }
+  #hero h2 {
+    font-size: 30px;
+  }
+  #hero h4 {
+    font-size: 18px;
+  }
+  #hero .heroimg {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  #hero .heroimg img {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
   #sm-banner {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -641,6 +731,7 @@ body {
         -ms-flex-align: center;
             align-items: center;
     padding: 40px 20px;
+    width: 100%;
   }
   #sm-banner .banner-box {
     display: -webkit-box;
@@ -657,8 +748,8 @@ body {
         -ms-flex-align: start;
             align-items: start;
     background-image: url("img/banner/b17.jpg");
-    width: 49%;
-    min-width: 580px;
+    width: 100%;
+    min-width: 300px;
     height: 50vh;
     background-size: cover;
     background-position: center;
@@ -718,11 +809,11 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: #f3f1f1;
+    background-color: #E3E6F3;
     width: 70%;
     border-radius: 20px;
-    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
     padding: 20px 0;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -751,18 +842,20 @@ body {
   .cart-nav .navbar-mobile li button {
     text-align: left;
     background-color: rgba(243, 241, 241, 0);
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 10px 0px;
     padding-left: 20px;
     width: 100%;
     height: 50%;
     font-size: 20px;
+    background-color: #465b520f;
     display: block;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+    border: none;
   }
   .cart-nav .navbar-mobile li button:hover {
     -webkit-transform: translateY(5px);
@@ -837,27 +930,6 @@ body {
     margin-top: -2px;
     -webkit-transform: rotate(-135deg);
             transform: rotate(-135deg);
-  }
-  #hero {
-    background-image: url("img/hero4.png");
-    height: 100vh;
-    width: 150%;
-    background-size: cover;
-    background-position: bottom 100% left 90%;
-    padding: 0 80px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
   .product1 {
     text-align: center;
@@ -955,6 +1027,24 @@ body {
   }
   #banner3 div {
     width: 100%;
+  }
+  #banner3 .banner-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    background-image: url("img/banner/b7.jpg");
+    width: 100%;
+    min-width: 300px;
   }
 }
 
