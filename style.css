@@ -1120,7 +1120,7 @@ body {
   width: 100vw;
   bottom: -4000px;
   background-color: white;
-  height: 100vh;
+  height: 90vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
