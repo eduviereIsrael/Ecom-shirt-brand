@@ -935,6 +935,8 @@ body {
     justify-content: flex-start;
     z-index: 3;
     transition: bottom .8s ease;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 
 .close-product-details{
