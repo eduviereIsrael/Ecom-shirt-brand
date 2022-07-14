@@ -1176,8 +1176,8 @@ body {
   overflow-y: auto;
 }
 
-.product-details .product-details-description {
-  font-size: 12px;
+#product-details-description {
+  font-size: 10px;
 }
 
 .product-details-action {
