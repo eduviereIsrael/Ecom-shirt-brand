@@ -1132,8 +1132,8 @@ body {
       -ms-flex-pack: start;
           justify-content: flex-start;
   z-index: 3;
-  -webkit-transition: bottom .5s ease;
-  transition: bottom .5s ease;
+  -webkit-transition: bottom .8s ease;
+  transition: bottom .8s ease;
 }
 
 .close-product-details {
