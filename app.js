@@ -2,6 +2,11 @@ const hamburger = document.querySelector('.hambuga');
 const mobileMenuLinks = document.querySelector('.navbar-mobile');
 const productContainer = document.querySelector('#pro-container-1');
 const NewProductsContainer = document.querySelector('#pro-container-2');
+const prodDetailSect = document.querySelector('.details-section');
+const productDetailsImg = document.getElementsByClassName('product-details-img')
+const productDetailsName = document.getElementsByClassName('product-details-name')
+const productDetailsPrice = document.getElementsByClassName('product-details-price')
+const productDetailsDesc = document.getElementsByClassName('product-details-description')
 
 
 const products = [
@@ -110,6 +115,15 @@ let proDivDiv ;
 let proDivHfour;
 let proDivA;
 let proDivAimg ;
+let clickedPoduct = {} ;
+
+const onProductClick = x => {
+    clickedPoduct = x;
+    productDetailsImg[0].src = clickedPoduct.img;
+    productDetailsName[0].textContent = clickedPoduct.name;
+    productDetailsPrice[0].innerText = `$${clickedPoduct.price}`;
+    console.log(productDetailsPrice)
+}
 
 
 const product = products.map(prod => {
@@ -131,20 +145,25 @@ const product = products.map(prod => {
     proDivAimg.src = 'img/Icon feather-shopping-cart.png'
     proDivA.append(proDivAimg)
     proDivA.classList.add('cart')
-    proDivA.href = ''
     proDiv.append(proDivSpan, proDivHfive, proDivDiv, proDivHfour);
     // productDiv.append(proImg, proDiv, proDivA)
+    [proImg,proDiv,proDivA].map((item) => {
+        item.addEventListener('click', () => {
+            prodDetailSect.classList.add('details-on')
+            onProductClick(prod)
+        })
+    })
 
     return [proImg,proDiv,proDivA];
     
     // return productDiv;
 })
 
+// console.log(clickedPoduct)
+
 const featProduct = product.slice(0, 8)
 const newProduct = product.slice(8)
-// console.log(featProduct)
-console.log(newProduct[7])
-console.log(product[15])
+
 
 for (let i = 0; i < featProduct.length; i++){
     // console.log(product[i])
@@ -171,6 +190,14 @@ for (let i = 0; i < newProduct.length; i++){
     // console.dir(productDiv.children)
     NewProductsContainer.append(productDiv)
 }
+
+// console.log(productDiv)
+
+// function detailsOn(e){
+//     console.dir(e.target.offsetParent)
+// }
+
+// window.addEventListener('click', detailsOn)
 
 hamburger.addEventListener('click', () => {
     if (!hamburger.classList.contains('clicked')){
