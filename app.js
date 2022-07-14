@@ -1,9 +1,176 @@
-// import products from './products';
-
-// console.log(products)
 const hamburger = document.querySelector('.hambuga');
 const mobileMenuLinks = document.querySelector('.navbar-mobile');
+const productContainer = document.querySelector('#pro-container-1');
+const NewProductsContainer = document.querySelector('#pro-container-2');
 
+
+const products = [
+    {
+        name: 'San mong dom',
+        price: 750,
+        img: "img/products/f1.jpg",
+        featured: true,
+    },
+    {
+        name: 'Naruto shirt',
+        price: 125,
+        img: "img/products/f2.jpg",
+        featured: true,
+    },
+    {
+        name: 'Corel madin',
+        price: 32,
+        img: "img/products/f3.jpg",
+        featured: true,
+    },
+    {
+        name: 'Satin Satin',
+        price: 47,
+        img: "img/products/f4.jpg",
+        featured: true,
+    },
+    {
+        name: 'Gyomei',
+        price: 147,
+        img: "img/products/f5.jpg",
+        featured: true,
+    },
+    {
+        name: 'Rabona!!!',
+        price: 199,
+        img: "img/products/f6.jpg",
+        featured: true,
+    },
+    {
+        name: 'Ferling',
+        price: 62,
+        img: "img/products/f7.jpg",
+        featured: true,
+    },
+    {
+        name: 'Knardy',
+        price: 200,
+        img: "img/products/f8.jpg",
+        featured: true,
+    },
+    {
+        name: 'Js bok',
+        price: 20,
+        img: "img/products/n1.jpg",
+    },
+    {
+        name: 'Mist Mag',
+        price: 5,
+        img: "img/products/n2.jpg",
+    },
+    {
+        name: 'Flash Fire',
+        price: 97,
+        img: "img/products/n3.jpg",
+    },
+    {
+        name: 'Howitzer',
+        price: 94,
+        img: "img/products/n4.jpg",
+    },
+    {
+        name: 'Zero',
+        price: 48,
+        img: "img/products/n5.jpg",
+    },
+    {
+        name: 'Kimono',
+        price: 530,
+        img: "img/products/n6.jpg",
+    },
+    {
+        name: 'Hangett',
+        price: 110,
+        img: "img/products/n7.jpg",
+    },
+    {
+        name: 'Snip',
+        price: 14,
+        img: "img/products/n8.jpg",
+    },
+]
+
+let elem = function(x){
+    let domNode = document.createElement(x)
+    return domNode
+}
+
+let productDiv;
+let productDivArray = elem('DIV')
+let proImg ;
+let proDiv ;
+let proDivSpan ;
+let proDivHfive;
+let proDivDiv ;
+let proDivHfour;
+let proDivA;
+let proDivAimg ;
+
+
+const product = products.map(prod => {
+    proImg = elem('IMG');
+    proDiv = elem('DIV');
+    proDivSpan = elem('SPAN');
+    proDivHfive = elem('H5');
+    proDivDiv = elem('DIV');
+    proDivHfour = elem('H4');
+    proDivA = elem('A');
+    proDivAimg = elem('IMG');
+
+    proImg.src = prod.img;
+    proDiv.classList.add('des');
+    proDivSpan.textContent = 'adidas';
+    proDivHfive.textContent = prod.name
+    proDivDiv.classList.add('star');
+    proDivHfour.textContent = `$${prod.price}`
+    proDivAimg.src = 'img/Icon feather-shopping-cart.png'
+    proDivA.append(proDivAimg)
+    proDivA.classList.add('cart')
+    proDivA.href = ''
+    proDiv.append(proDivSpan, proDivHfive, proDivDiv, proDivHfour);
+    // productDiv.append(proImg, proDiv, proDivA)
+
+    return [proImg,proDiv,proDivA];
+    
+    // return productDiv;
+})
+
+const featProduct = product.slice(0, 8)
+const newProduct = product.slice(8)
+// console.log(featProduct)
+console.log(newProduct[7])
+console.log(product[15])
+
+for (let i = 0; i < featProduct.length; i++){
+    // console.log(product[i])
+    productDiv = elem('DIV');
+    productDiv.classList.add('pro')
+    // console.log(productDiv)
+    for (let j = 0; j < featProduct[i].length; j++){
+        productDiv.append(featProduct[i][j])
+        // console.log(product[i][j])
+    }
+    // console.dir(productDiv.children)
+    productContainer.append(productDiv)
+}
+
+for (let i = 0; i < newProduct.length; i++){
+    // console.log(product[i])
+    productDiv = elem('DIV');
+    productDiv.classList.add('pro')
+    // console.log(productDiv)
+    for (let j = 0; j < newProduct[i].length; j++){
+        productDiv.append(newProduct[i][j])
+        // console.log(product[i][j])
+    }
+    // console.dir(productDiv.children)
+    NewProductsContainer.append(productDiv)
+}
 
 hamburger.addEventListener('click', () => {
     if (!hamburger.classList.contains('clicked')){
@@ -19,5 +186,3 @@ hamburger.addEventListener('click', () => {
     }
     mobileMenuLinks.classList.toggle('navbar-display')
 } )
-
-// const products = require(products)

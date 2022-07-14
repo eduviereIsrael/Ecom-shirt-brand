@@ -560,6 +560,7 @@ body {
             align-items: center;
             // background-color: red;
         }
+        
         h1{
             color: $third-color;
             font-size: 40px;
@@ -862,8 +863,6 @@ body {
 
 }
 
-
-
 @media screen and (max-width: 450px){
 
     .product1 {
@@ -922,5 +921,14 @@ body {
         }
     }
     
+}
+
+#test {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    img{
+        width: 100px;
+    }
 }
 
