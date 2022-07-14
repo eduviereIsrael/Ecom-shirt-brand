@@ -7,6 +7,7 @@ const productDetailsImg = document.getElementsByClassName('product-details-img')
 const productDetailsName = document.getElementsByClassName('product-details-name')
 const productDetailsPrice = document.getElementsByClassName('product-details-price')
 const productDetailsDesc = document.getElementsByClassName('product-details-description')
+const closeDetails = document.querySelector('.close-product-details')
 
 
 const products = [
@@ -191,13 +192,16 @@ for (let i = 0; i < newProduct.length; i++){
     NewProductsContainer.append(productDiv)
 }
 
+
 // console.log(productDiv)
 
 // function detailsOn(e){
 //     console.dir(e.target.offsetParent)
 // }
 
-// window.addEventListener('click', detailsOn)
+closeDetails.addEventListener('click', () => {
+    prodDetailSect.classList.remove('details-on')
+})
 
 hamburger.addEventListener('click', () => {
     if (!hamburger.classList.contains('clicked')){
