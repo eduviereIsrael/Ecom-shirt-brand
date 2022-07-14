@@ -965,6 +965,9 @@ body {
     justify-content: flex-start;
     align-items: center;
     overflow-y: auto;
+    .product-details-description{
+        font-size: 12px;
+    }
 }
 
 .product-details-action{
