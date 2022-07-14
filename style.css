@@ -1155,7 +1155,9 @@ body {
 }
 
 .product-details-action {
+  position: fixed;
   width: 100%;
+  bottom: 0;
 }
 
 .product-details-img {
