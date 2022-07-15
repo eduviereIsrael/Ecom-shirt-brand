@@ -126,7 +126,6 @@ const onProductClick = x => {
     console.log(productDetailsPrice)
 }
 
-
 const product = products.map(prod => {
     proImg = elem('IMG');
     proDiv = elem('DIV');
@@ -160,22 +159,17 @@ const product = products.map(prod => {
     // return productDiv;
 })
 
-// console.log(clickedPoduct)
 
 const featProduct = product.slice(0, 8)
 const newProduct = product.slice(8)
 
 
 for (let i = 0; i < featProduct.length; i++){
-    // console.log(product[i])
     productDiv = elem('DIV');
     productDiv.classList.add('pro')
-    // console.log(productDiv)
     for (let j = 0; j < featProduct[i].length; j++){
         productDiv.append(featProduct[i][j])
-        // console.log(product[i][j])
     }
-    // console.dir(productDiv.children)
     productContainer.append(productDiv)
 }
 
@@ -192,12 +186,6 @@ for (let i = 0; i < newProduct.length; i++){
     NewProductsContainer.append(productDiv)
 }
 
-
-// console.log(productDiv)
-
-// function detailsOn(e){
-//     console.dir(e.target.offsetParent)
-// }
 
 closeDetails.addEventListener('click', () => {
     prodDetailSect.classList.remove('details-on')
