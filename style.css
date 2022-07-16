@@ -864,21 +864,29 @@ body {
   .cart-nav .navbar-display {
     left: 0px;
   }
-  .cart-nav .logo {
+  .cart-nav .logom {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     width: 55%;
   }
-  .cart-nav .logo img {
+  .cart-nav .logom .logosvg {
+    width: 50px;
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    overflow: hidden;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -888,8 +896,6 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-transform: translateX(25px);
-            transform: translateX(25px);
   }
   .cart-nav .hambuga {
     cursor: pointer;
@@ -905,6 +911,9 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .cart-nav .cart {
+    width: 30px;
   }
   .cart-nav .ham {
     display: -webkit-box;
